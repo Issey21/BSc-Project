@@ -1,8 +1,13 @@
 from data_preparation import prepare_data
 from model_training import train_model, evaluate_model
 
+# Please following the link to download the dataset, I recommend the r_cra__lp.hdf set. 
+# https://edmond.mpg.de/dataset.xhtml?persistentId=doi:10.17617/3.LACYPN#
+# 
+
 def main():
-    file_path = '/Users/Isabell/Desktop/BSc/hsr4hci/datasets/r_cra__lp/output/r_cra__lp.hdf'
+    file_path = 'path\to\dataset'
+    
     train_loader, val_loader, test_loader, input_size = prepare_data(file_path)
 
     hidden_sizes = [256, 256]
